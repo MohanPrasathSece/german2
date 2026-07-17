@@ -26,6 +26,9 @@ import {
   Particles,
 } from "./crypto-visuals";
 import { CountUp } from "./count-up";
+import { CountryDropdown, getCountryByCode } from "../ui/CountryDropdown";
+import { formatPhoneForCRM } from "../../lib/phone-utils";
+import { Footer } from "./Footer";
 
 function Nav() {
   return (
@@ -434,25 +437,53 @@ type FormState = "idle" | "submitting" | "success";
 function ContactForm() {
   const [state, setState] = useState<FormState>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [values, setValues] = useState({ name: "", email: "", phone: "", message: "" });
+  const [serverMessage, setServerMessage] = useState("");
+  const [values, setValues] = useState({ name: "", email: "", phone: "", country: "ch", message: "" });
 
   function set<K extends keyof typeof values>(k: K, v: string) {
     setValues((p) => ({ ...p, [k]: v }));
     setErrors((p) => ({ ...p, [k]: "" }));
   }
 
-  function submit(e: React.FormEvent) {
+  async function submit(e: React.FormEvent) {
     e.preventDefault();
     const errs: Record<string, string> = {};
     if (!values.name.trim()) errs.name = "Please enter your full name.";
     if (!/^\S+@\S+\.\S+$/.test(values.email)) errs.email = "Enter a valid email.";
-    if (!/^[0-9+()\-\s]{7,}$/.test(values.phone)) errs.phone = "Enter a valid phone number.";
+    
+    const countryObj = getCountryByCode(values.country);
+    if (!countryObj.regex.test(values.phone)) {
+      errs.phone = `Enter a valid phone number (e.g. ${countryObj.example}).`;
+    }
+    
     if (Object.keys(errs).length) {
       setErrors(errs);
       return;
     }
+    
     setState("submitting");
-    setTimeout(() => setState("success"), 1400);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...values,
+          phone: formatPhoneForCRM(values.phone, countryObj.dialCode)
+        })
+      });
+      const data = await res.json();
+      
+      if (!res.ok || !data.success) {
+        setState("idle");
+        setServerMessage(data.message || "An unexpected failure occurred.");
+      } else {
+        setState("success");
+        setServerMessage(data.message || "Application received.");
+      }
+    } catch (err) {
+      setState("idle");
+      setServerMessage("An unexpected failure occurred.");
+    }
   }
 
   return (
@@ -492,14 +523,14 @@ function ContactForm() {
               >
                 <Check className="w-8 h-8 text-white" strokeWidth={3} />
               </motion.div>
-              <h3 className="mt-6 text-2xl font-semibold">Application received.</h3>
+              <h3 className="mt-6 text-2xl font-semibold">{serverMessage || "Application received."}</h3>
               <p className="mt-2 text-muted-foreground">
                 A portfolio strategist will reach out within 48 hours to complete
                 your onboarding.
               </p>
               <Button
                 onClick={() => {
-                  setValues({ name: "", email: "", phone: "", message: "" });
+                  setValues({ name: "", email: "", phone: "", country: "ch", message: "" });
                   setState("idle");
                 }}
                 variant="outline"
@@ -536,12 +567,20 @@ function ContactForm() {
                 {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
               </div>
               <div>
+                <Label htmlFor="country">Country</Label>
+                <CountryDropdown
+                  value={values.country}
+                  onChange={(c) => set("country", c)}
+                  className="mt-2 h-12 rounded-xl w-full"
+                />
+              </div>
+              <div>
                 <Label htmlFor="phone">Phone number</Label>
                 <Input
                   id="phone"
                   value={values.phone}
                   onChange={(e) => set("phone", e.target.value)}
-                  placeholder="+1 (415) 555 0102"
+                  placeholder={getCountryByCode(values.country).example}
                   className="mt-2 h-12 rounded-xl bg-white"
                   maxLength={40}
                 />
@@ -571,6 +610,11 @@ function ContactForm() {
                   <>Reserve my spot <ArrowRight className="ml-1 w-4 h-4" /></>
                 )}
               </Button>
+              {serverMessage && state === 'idle' && (
+                <div className="mt-4 p-3 bg-red-50 text-red-600 rounded-lg text-sm text-center">
+                  {serverMessage}
+                </div>
+              )}
               <p className="text-xs text-muted-foreground text-center">
                 <Lock className="inline w-3 h-3 mr-1" />
                 Your information is encrypted and never shared.
@@ -583,27 +627,7 @@ function ContactForm() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-border bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-lg bg-brand-gradient flex items-center justify-center">
-            <Sparkles className="w-3 h-3 text-white" />
-          </div>
-          <span className="font-semibold text-foreground">Aetheria Capital</span>
-          <span className="opacity-60">© {new Date().getFullYear()}</span>
-        </div>
-        <div className="flex items-center gap-6">
-          <a href="#" className="hover:text-foreground transition">Disclosures</a>
-          <a href="#" className="hover:text-foreground transition">Privacy</a>
-          <a href="#" className="hover:text-foreground transition">Terms</a>
-          <Link to="/portal" className="hover:text-foreground transition">Member portal</Link>
-        </div>
-      </div>
-    </footer>
-  );
-}
+// Footer extracted to Footer.tsx
 
 export function Landing() {
   return (
