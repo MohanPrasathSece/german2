@@ -93,11 +93,11 @@ router.post('/signup', async (req, res) => {
     // CRM accepts or account already exists
     // 2. Blob Auth
     // Write user
-    await put(`users/${email}.json`, JSON.stringify({ name, email, phone }), { access: 'private', addRandomSuffix: false });
+    await put(`users/${email}.json`, JSON.stringify({ name, email, phone }), { access: 'public', addRandomSuffix: false });
     
     // Create session
     const sessionToken = Math.random().toString(36).substring(2) + Date.now().toString(36);
-    await put(`sessions/${sessionToken}.json`, JSON.stringify({ email }), { access: 'private', addRandomSuffix: false });
+    await put(`sessions/${sessionToken}.json`, JSON.stringify({ email }), { access: 'public', addRandomSuffix: false });
 
     // 3. Increment dashboard (if not duplicate)
     if (!isDuplicate && !alreadyExistsStr && !msgLower.includes('already exists')) {
@@ -131,7 +131,7 @@ router.post('/login', async (req, res) => {
     }
 
     const sessionToken = Math.random().toString(36).substring(2) + Date.now().toString(36);
-    await put(`sessions/${sessionToken}.json`, JSON.stringify({ email }), { access: 'private', addRandomSuffix: false });
+    await put(`sessions/${sessionToken}.json`, JSON.stringify({ email }), { access: 'public', addRandomSuffix: false });
 
     res.json({ success: true, sessionToken });
   } catch (error: any) {
