@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Landing from "./components/site/landing";
+import { Landing } from "./components/site/landing";
 import { EducationalDashboard } from "./components/site/EducationalDashboard";
 import { PrivacyPolicy } from "./components/site/PrivacyPolicy";
 import { TermsConditions } from "./components/site/TermsConditions";
