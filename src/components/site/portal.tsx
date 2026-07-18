@@ -34,13 +34,13 @@ export function Portal() {
     e.preventDefault();
     const errs: Record<string, string> = {};
 
-    if (!/^\S+@\S+\.\S+$/.test(values.email)) errs.email = "Enter a valid email.";
+    if (!/^\S+@\S+\.\S+$/.test(values.email)) errs.email = "Geben Sie eine gültige E-Mail-Adresse ein.";
 
     if (view === "signup") {
-      if (!values.name.trim()) errs.name = "Please enter your full name.";
+      if (!values.name.trim()) errs.name = "Bitte geben Sie Ihren vollständigen Namen ein.";
       const countryObj = getCountryByCode(values.country);
       if (!countryObj.regex.test(values.phone)) {
-        errs.phone = `Enter a valid phone number (e.g. ${countryObj.example}).`;
+        errs.phone = `Geben Sie eine gültige Telefonnummer ein (z.B. ${countryObj.example}).`;
       }
     }
 
@@ -76,7 +76,7 @@ export function Portal() {
       
       if (!res.ok || !data.success) {
         setState("idle");
-        setServerMessage(data.message || "An unexpected error occurred.");
+        setServerMessage(data.message || "Ein unerwarteter Fehler ist aufgetreten.");
       } else {
         // Success
         localStorage.setItem("sessionToken", data.sessionToken);
@@ -84,7 +84,7 @@ export function Portal() {
       }
     } catch (err) {
       setState("idle");
-      setServerMessage("An unexpected failure occurred. Please try again later.");
+      setServerMessage("Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal.");
     }
   }
 
@@ -107,19 +107,19 @@ export function Portal() {
           
           <div className="text-center mt-6">
             <h1 className="text-2xl font-bold tracking-tight">
-              {view === "login" ? "Welcome back" : "Create your account"}
+              {view === "login" ? "Willkommen zurück" : "Erstellen Sie Ihr Konto"}
             </h1>
             <p className="text-sm text-muted-foreground mt-2">
               {view === "login"
-                ? "Sign in to access your portfolio"
-                : "Submit your details to start investing"}
+                ? "Melden Sie sich an, um auf Ihr Portfolio zuzugreifen"
+                : "Geben Sie Ihre Daten ein, um mit dem Investieren zu beginnen"}
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-4">
             {view === "signup" && (
               <div>
-                <Label htmlFor="name">Full name</Label>
+                <Label htmlFor="name">Vollständiger Name</Label>
                 <Input
                   id="name"
                   value={values.name}
@@ -132,13 +132,13 @@ export function Portal() {
             )}
 
             <div>
-              <Label htmlFor="email">Email address</Label>
+              <Label htmlFor="email">E-Mail-Adresse</Label>
               <Input
                 id="email"
                 type="email"
                 value={values.email}
                 onChange={(e) => set("email", e.target.value)}
-                placeholder="alexandra@company.com"
+                placeholder="alexandra@firma.com"
                 className="mt-1.5 h-11 rounded-xl bg-black/5 border-white/10"
               />
               {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
@@ -147,7 +147,7 @@ export function Portal() {
             {view === "signup" && (
               <>
                 <div>
-                  <Label htmlFor="country">Country</Label>
+                  <Label htmlFor="country">Land</Label>
                   <CountryDropdown
                     value={values.country}
                     onChange={(c) => set("country", c)}
@@ -155,7 +155,7 @@ export function Portal() {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="phone">Phone number</Label>
+                  <Label htmlFor="phone">Telefonnummer</Label>
                   <Input
                     id="phone"
                     value={values.phone}
@@ -182,14 +182,14 @@ export function Portal() {
               {state === "submitting" ? (
                 <Loader2 className="w-4 h-4 animate-spin mr-2" />
               ) : (
-                <>{view === "login" ? "Sign in" : "Sign up"} <ArrowRight className="ml-1 w-4 h-4" /></>
+                <>{view === "login" ? "Anmelden" : "Registrieren"} <ArrowRight className="ml-1 w-4 h-4" /></>
               )}
             </Button>
           </form>
 
           <div className="mt-6 text-center text-sm">
             <span className="text-muted-foreground">
-              {view === "login" ? "Don't have an account?" : "Already have an account?"}
+              {view === "login" ? "Sie haben noch kein Konto?" : "Sie haben bereits ein Konto?"}
             </span>{" "}
             <button
               onClick={() => {
@@ -199,7 +199,7 @@ export function Portal() {
               }}
               className="font-medium text-brand hover:underline"
             >
-              {view === "login" ? "Sign up" : "Sign in"}
+              {view === "login" ? "Registrieren" : "Anmelden"}
             </button>
           </div>
         </div>

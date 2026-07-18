@@ -42,19 +42,19 @@ function Nav() {
             <span className="font-bold tracking-tight">Aetheria</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#process" className="hover:text-foreground transition">How it works</a>
-            <a href="#intelligence" className="hover:text-foreground transition">Intelligence</a>
-            <a href="#apply" className="hover:text-foreground transition">Apply</a>
+            <a href="#process" className="hover:text-foreground transition">So funktioniert's</a>
+            <a href="#intelligence" className="hover:text-foreground transition">Intelligenz</a>
+            <a href="#apply" className="hover:text-foreground transition">Bewerben</a>
           </nav>
           <div className="flex items-center gap-2">
             <Link
               to="/portal"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition hidden sm:inline"
             >
-              Member portal
+              Mitgliederportal
             </Link>
             <Button asChild size="sm" className="rounded-full bg-brand-gradient shadow-brand">
-              <a href="#apply">Get started</a>
+              <a href="#apply">Loslegen</a>
             </Button>
           </div>
         </div>
@@ -75,7 +75,7 @@ function UrgencyBadge() {
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand/50" />
         <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
       </span>
-      Only <span className="text-foreground font-semibold">18 onboarding spots</span> remaining this month
+      Nur noch <span className="text-foreground font-semibold">18 Onboarding-Plätze</span> diesen Monat verfügbar
     </motion.div>
   );
 }
@@ -109,10 +109,10 @@ function Hero() {
           transition={{ duration: 0.9, delay: 0.15 }}
           className="mt-8 text-5xl md:text-7xl font-bold tracking-tight leading-[1.02]"
         >
-          Invest in crypto with the
+          Investieren Sie in Krypto mit der
           <br />
-          precision of{" "}
-          <span className="text-brand-gradient">artificial intelligence</span>
+          Präzision von{" "}
+          <span className="text-brand-gradient">künstlicher Intelligenz</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -120,9 +120,9 @@ function Hero() {
           transition={{ duration: 0.9, delay: 0.35 }}
           className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
         >
-          A private allocation platform for a new class of investor. Continuously
-          rebalanced portfolios engineered by machine intelligence, monitored 24/7,
-          protected by institutional-grade risk controls.
+          Eine private Allokationsplattform für eine neue Klasse von Investoren. Kontinuierlich
+          neu gewichtete Portfolios, entwickelt durch maschinelle Intelligenz, rund um die Uhr überwacht
+          und geschützt durch Risikokontrollen auf institutionellem Niveau.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -136,7 +136,7 @@ function Hero() {
             className="rounded-full bg-brand-gradient shadow-brand px-8 h-12 text-base"
           >
             <a href="#apply">
-              Get started <ArrowRight className="ml-1 w-4 h-4" />
+              Loslegen <ArrowRight className="ml-1 w-4 h-4" />
             </a>
           </Button>
           <Button
@@ -145,7 +145,7 @@ function Hero() {
             variant="outline"
             className="rounded-full h-12 px-8 border-border bg-white/60 backdrop-blur"
           >
-            <a href="#process">Learn more</a>
+            <a href="#process">Mehr erfahren</a>
           </Button>
         </motion.div>
 
@@ -156,13 +156,13 @@ function Hero() {
           className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-muted-foreground"
         >
           <span className="inline-flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5" /> Applications close in 6 days
+            <Clock className="w-3.5 h-3.5" /> Bewerbungsschluss in 6 Tagen
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <ShieldCheck className="w-3.5 h-3.5" /> Cold-storage custody
+            <ShieldCheck className="w-3.5 h-3.5" /> Cold-Storage Verwahrung
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <Activity className="w-3.5 h-3.5" /> Investor capacity 94% full
+            <Activity className="w-3.5 h-3.5" /> Investorenkapazität zu 94% ausgeschöpft
           </span>
         </motion.div>
 
@@ -181,7 +181,7 @@ function Hero() {
               </div>
             </div>
             <div className="text-right">
-              <div className="text-muted-foreground text-xs">AI confidence</div>
+              <div className="text-muted-foreground text-xs">KI-Konfidenz</div>
               <div className="font-semibold text-lg text-brand">
                 <CountUp to={97} suffix="%" />
               </div>
@@ -199,23 +199,23 @@ function Hero() {
 const steps = [
   {
     icon: Cpu,
-    title: "AI Market Analysis",
-    desc: "Neural models parse on-chain flows, macro signals, and sentiment across 1,200+ assets in real time.",
+    title: "KI-Marktanalyse",
+    desc: "Neuronale Modelle analysieren On-Chain-Flüsse, Makrosignale und die Stimmung über 1.200+ Assets in Echtzeit.",
   },
   {
     icon: Layers,
-    title: "Smart Portfolio Allocation",
-    desc: "Personalized allocations balance conviction, correlation, and liquidity — rebalanced automatically.",
+    title: "Smarte Portfolio-Allokation",
+    desc: "Personalisierte Allokationen balancieren Überzeugung, Korrelation und Liquidität aus — mit automatischer Neugewichtung.",
   },
   {
     icon: ShieldCheck,
-    title: "Automated Risk Management",
-    desc: "Dynamic hedging, drawdown circuit breakers, and volatility-aware position sizing protect your capital.",
+    title: "Automatisiertes Risikomanagement",
+    desc: "Dynamisches Hedging, Drawdown-Schutzschalter und volatilitätsbewusste Positionsgrößen schützen Ihr Kapital.",
   },
   {
     icon: Activity,
-    title: "Continuous Monitoring",
-    desc: "24/7 execution and reporting with human oversight from our quantitative research desk.",
+    title: "Kontinuierliche Überwachung",
+    desc: "24/7 Ausführung und Reporting mit menschlicher Aufsicht durch unser quantitatives Research-Desk.",
   },
 ];
 
@@ -230,14 +230,13 @@ function Process() {
           className="max-w-2xl"
         >
           <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">
-            How it works
+            So funktioniert's
           </div>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight">
-            Four steps between you and an intelligent portfolio.
+            Vier Schritte zwischen Ihnen und einem intelligenten Portfolio.
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Every allocation is engineered, reviewed, and rebalanced by a
-            purpose-built AI system — never a template.
+            Jede Allokation wird von einem speziell entwickelten KI-System konstruiert, überprüft und neu gewichtet — niemals nach einer Vorlage.
           </p>
         </motion.div>
 
@@ -279,10 +278,10 @@ function Process() {
 }
 
 const metrics = [
-  { label: "Assets under intelligence", value: 1.2, prefix: "$", suffix: "B", decimals: 1 },
-  { label: "Active investors", value: 3400, suffix: "+" },
-  { label: "Avg. annualized alpha", value: 28.4, suffix: "%", decimals: 1 },
-  { label: "Uptime & monitoring", value: 99.99, suffix: "%", decimals: 2 },
+  { label: "Unter KI verwaltetes Vermögen", value: 1.2, prefix: "$", suffix: " Mrd.", decimals: 1 },
+  { label: "Aktive Investoren", value: 3400, suffix: "+" },
+  { label: "Durchschn. annualisiertes Alpha", value: 28.4, suffix: "%", decimals: 1 },
+  { label: "Verfügbarkeit & Überwachung", value: 99.99, suffix: "%", decimals: 2 },
 ];
 
 function Intelligence() {
@@ -297,22 +296,22 @@ function Intelligence() {
             viewport={{ once: true }}
           >
             <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">
-              Intelligence
+              Intelligenz
             </div>
             <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight">
-              Built for the investor who values <span className="text-brand-gradient">discretion and edge.</span>
+              Gebaut für Investoren, die Diskretion und einen <span className="text-brand-gradient">Informationsvorsprung schätzen.</span>
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              Aetheria combines quantitative research, on-chain intelligence, and
-              machine learning to deliver a portfolio experience previously
-              reserved for institutions.
+              Aetheria kombiniert quantitatives Research, On-Chain-Intelligenz und
+              maschinelles Lernen, um ein Portfolio-Erlebnis zu bieten, das bisher
+              Institutionen vorbehalten war.
             </p>
             <ul className="mt-8 space-y-3">
               {[
-                "Diversification across L1s, L2s, DeFi, and stable yield",
-                "Institutional custody with SOC 2 & MPC infrastructure",
-                "Transparent, real-time analytics and audit trail",
-                "Personal onboarding with a portfolio strategist",
+                "Diversifikation über L1s, L2s, DeFi und stabile Renditen",
+                "Institutionelle Verwahrung mit SOC 2 & MPC-Infrastruktur",
+                "Transparente Echtzeit-Analysen und Audit-Trails",
+                "Persönliches Onboarding mit einem Portfolio-Strategen",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-sm">
                   <span className="mt-0.5 w-5 h-5 rounded-full bg-brand-gradient flex items-center justify-center shrink-0">
@@ -333,13 +332,13 @@ function Intelligence() {
             <div className="relative rounded-3xl glass-card shadow-card p-8 overflow-hidden">
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-xs text-muted-foreground">Portfolio value</div>
+                  <div className="text-xs text-muted-foreground">Portfolio-Wert</div>
                   <div className="text-3xl font-bold">
                     $<CountUp to={248320} />
                   </div>
                 </div>
                 <div className="rounded-full bg-brand/10 text-brand text-xs px-3 py-1 font-medium">
-                  +12.4% this quarter
+                  +12,4% in diesem Quartal
                 </div>
               </div>
               <div className="mt-6 h-48 relative">
@@ -402,14 +401,14 @@ function Intelligence() {
           </div>
           <div className="relative max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] opacity-80 font-semibold">
-              Limited early access
+              Limitierter Vorabzugang
             </div>
             <h3 className="mt-3 text-3xl md:text-4xl font-bold">
-              Investor capacity is nearly full for this onboarding window.
+              Die Investorenkapazität ist für dieses Onboarding-Fenster fast ausgeschöpft.
             </h3>
             <p className="mt-3 opacity-90">
-              Applications close after the current allocation is complete. Reserve
-              your place before the next window opens.
+              Die Bewerbungen schließen, sobald die aktuelle Allokation abgeschlossen ist. Reservieren Sie
+              Ihren Platz, bevor das nächste Fenster öffnet.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Button
@@ -418,11 +417,11 @@ function Intelligence() {
                 className="rounded-full bg-white text-brand hover:bg-white/90 h-12 px-8 shadow-soft"
               >
                 <a href="#apply">
-                  Reserve your spot <ArrowRight className="ml-1 w-4 h-4" />
+                  Platz reservieren <ArrowRight className="ml-1 w-4 h-4" />
                 </a>
               </Button>
               <div className="text-sm opacity-90">
-                18 of 400 spots remaining · Next window opens Q2
+                18 von 400 Plätzen verbleiben · Nächstes Fenster öffnet in Q2
               </div>
             </div>
           </div>
@@ -448,12 +447,12 @@ function ContactForm() {
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     const errs: Record<string, string> = {};
-    if (!values.name.trim()) errs.name = "Please enter your full name.";
-    if (!/^\S+@\S+\.\S+$/.test(values.email)) errs.email = "Enter a valid email.";
+    if (!values.name.trim()) errs.name = "Bitte geben Sie Ihren vollständigen Namen ein.";
+    if (!/^\S+@\S+\.\S+$/.test(values.email)) errs.email = "Geben Sie eine gültige E-Mail-Adresse ein.";
     
     const countryObj = getCountryByCode(values.country);
     if (!countryObj.regex.test(values.phone)) {
-      errs.phone = `Enter a valid phone number (e.g. ${countryObj.example}).`;
+      errs.phone = `Geben Sie eine gültige Telefonnummer ein (z.B. ${countryObj.example}).`;
     }
     
     if (Object.keys(errs).length) {
@@ -475,14 +474,14 @@ function ContactForm() {
       
       if (!res.ok || !data.success) {
         setState("idle");
-        setServerMessage(data.message || "An unexpected failure occurred.");
+        setServerMessage(data.message || "Ein unerwarteter Fehler ist aufgetreten.");
       } else {
         setState("success");
-        setServerMessage(data.message || "Application received.");
+        setServerMessage(data.message || "Bewerbung erhalten.");
       }
     } catch (err) {
       setState("idle");
-      setServerMessage("An unexpected failure occurred.");
+      setServerMessage("Ein unerwarteter Fehler ist aufgetreten.");
     }
   }
 
@@ -496,14 +495,13 @@ function ContactForm() {
           className="text-center"
         >
           <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">
-            Reserve your spot
+            Platz reservieren
           </div>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight">
-            Apply for private access.
+            Bewerben Sie sich für privaten Zugang.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Our team reviews every application personally. You'll hear back
-            within 48 hours.
+            Unser Team prüft jede Bewerbung persönlich. Sie erhalten innerhalb von 48 Stunden eine Rückmeldung.
           </p>
         </motion.div>
 
@@ -523,10 +521,9 @@ function ContactForm() {
               >
                 <Check className="w-8 h-8 text-white" strokeWidth={3} />
               </motion.div>
-              <h3 className="mt-6 text-2xl font-semibold">{serverMessage || "Application received."}</h3>
+              <h3 className="mt-6 text-2xl font-semibold">{serverMessage || "Bewerbung erhalten."}</h3>
               <p className="mt-2 text-muted-foreground">
-                A portfolio strategist will reach out within 48 hours to complete
-                your onboarding.
+                Ein Portfolio-Stratege wird sich innerhalb von 48 Stunden bei Ihnen melden, um Ihr Onboarding abzuschließen.
               </p>
               <Button
                 onClick={() => {
@@ -536,13 +533,13 @@ function ContactForm() {
                 variant="outline"
                 className="mt-6 rounded-full"
               >
-                Submit another
+                Weitere einreichen
               </Button>
             </div>
           ) : (
             <form onSubmit={submit} className="space-y-5">
               <div>
-                <Label htmlFor="name">Full name</Label>
+                <Label htmlFor="name">Vollständiger Name</Label>
                 <Input
                   id="name"
                   value={values.name}
@@ -554,20 +551,20 @@ function ContactForm() {
                 {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
               </div>
               <div>
-                <Label htmlFor="email">Email address</Label>
+                <Label htmlFor="email">E-Mail-Adresse</Label>
                 <Input
                   id="email"
                   type="email"
                   value={values.email}
                   onChange={(e) => set("email", e.target.value)}
-                  placeholder="alexandra@company.com"
+                  placeholder="alexandra@firma.com"
                   className="mt-2 h-12 rounded-xl bg-white"
                   maxLength={255}
                 />
                 {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
               </div>
               <div>
-                <Label htmlFor="country">Country</Label>
+                <Label htmlFor="country">Land</Label>
                 <CountryDropdown
                   value={values.country}
                   onChange={(c) => set("country", c)}
@@ -575,7 +572,7 @@ function ContactForm() {
                 />
               </div>
               <div>
-                <Label htmlFor="phone">Phone number</Label>
+                <Label htmlFor="phone">Telefonnummer</Label>
                 <Input
                   id="phone"
                   value={values.phone}
@@ -587,12 +584,12 @@ function ContactForm() {
                 {errors.phone && <p className="mt-1 text-xs text-destructive">{errors.phone}</p>}
               </div>
               <div>
-                <Label htmlFor="message">Message <span className="text-muted-foreground">(optional)</span></Label>
+                <Label htmlFor="message">Nachricht <span className="text-muted-foreground">(optional)</span></Label>
                 <Textarea
                   id="message"
                   value={values.message}
                   onChange={(e) => set("message", e.target.value)}
-                  placeholder="Tell us a bit about your investment goals."
+                  placeholder="Erzählen Sie uns ein wenig über Ihre Anlageziele."
                   className="mt-2 min-h-28 rounded-xl bg-white"
                   maxLength={1000}
                 />
@@ -604,10 +601,10 @@ function ContactForm() {
               >
                 {state === "submitting" ? (
                   <>
-                    <Loader2 className="w-4 h-4 animate-spin mr-2" /> Submitting…
+                    <Loader2 className="w-4 h-4 animate-spin mr-2" /> Wird gesendet…
                   </>
                 ) : (
-                  <>Reserve my spot <ArrowRight className="ml-1 w-4 h-4" /></>
+                  <>Platz reservieren <ArrowRight className="ml-1 w-4 h-4" /></>
                 )}
               </Button>
               {serverMessage && state === 'idle' && (
@@ -617,7 +614,7 @@ function ContactForm() {
               )}
               <p className="text-xs text-muted-foreground text-center">
                 <Lock className="inline w-3 h-3 mr-1" />
-                Your information is encrypted and never shared.
+                Ihre Daten werden verschlüsselt und niemals weitergegeben.
               </p>
             </form>
           )}

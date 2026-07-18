@@ -10,7 +10,7 @@ export function PrivacyPolicy() {
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 hover:text-brand transition">
             <ArrowLeft className="w-4 h-4" />
-            <span className="font-semibold text-sm">Back to Home</span>
+            <span className="font-semibold text-sm">Zurück zur Startseite</span>
           </Link>
           <span className="font-bold tracking-tight">Aetheria</span>
         </div>
@@ -18,39 +18,39 @@ export function PrivacyPolicy() {
       
       <main className="mx-auto max-w-3xl px-6 pt-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="glass-card rounded-3xl p-8 md:p-12 border border-white/10 shadow-card">
-          <h1 className="text-4xl font-bold tracking-tight mb-8">Privacy Policy</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-8">Datenschutzbestimmungen</h1>
           <div className="prose prose-invert prose-brand max-w-none text-muted-foreground space-y-6 text-sm leading-relaxed">
-            <p><strong>Last Updated:</strong> {new Date().toLocaleDateString()}</p>
+            <p><strong>Zuletzt aktualisiert:</strong> {new Date().toLocaleDateString()}</p>
             
-            <h2 className="text-xl font-semibold text-foreground mt-8">1. Information Collection</h2>
-            <p>We collect information you provide directly to us, such as when you create or modify your account, request on-demand services, contact customer support, or otherwise communicate with us. This includes your name, email address, phone number, country, and messages.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">1. Datenerfassung</h2>
+            <p>Wir erfassen Informationen, die Sie uns direkt zur Verfügung stellen, z.B. wenn Sie Ihr Konto erstellen oder ändern, On-Demand-Dienste anfordern, den Kundensupport kontaktieren oder anderweitig mit uns kommunizieren. Dazu gehören Ihr Name, Ihre E-Mail-Adresse, Ihre Telefonnummer, Ihr Land und Nachrichten.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">2. Data Usage</h2>
-            <p>The data collected is used to personalize your experience, provide customer support, and communicate with you about our services, products, and updates. We do not sell your personal data.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">2. Datennutzung</h2>
+            <p>Die erfassten Daten werden verwendet, um Ihr Erlebnis zu personalisieren, Kundensupport zu bieten und mit Ihnen über unsere Dienstleistungen, Produkte und Updates zu kommunizieren. Wir verkaufen Ihre personenbezogenen Daten nicht.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">3. CRM Processing</h2>
-            <p>When you submit a contact form or signup request, your data is securely transmitted to our Customer Relationship Management (CRM) system for processing your inquiry or account registration.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">3. CRM-Verarbeitung</h2>
+            <p>Wenn Sie ein Kontaktformular oder eine Registrierungsanfrage senden, werden Ihre Daten sicher an unser Customer Relationship Management (CRM) System zur Bearbeitung Ihrer Anfrage oder Kontoregistrierung übermittelt.</p>
 
             <h2 className="text-xl font-semibold text-foreground mt-8">4. Cookies & Tracking</h2>
-            <p>We use cookies and similar tracking technologies to track activity on our service and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+            <p>Wir verwenden Cookies und ähnliche Tracking-Technologien, um Aktivitäten auf unserem Service zu verfolgen und bestimmte Informationen zu speichern. Sie können Ihren Browser so einstellen, dass er alle Cookies ablehnt oder anzeigt, wenn ein Cookie gesendet wird.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">5. Security</h2>
-            <p>The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. We use commercially acceptable means to protect your Personal Data, including encryption and strict access controls.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">5. Sicherheit</h2>
+            <p>Die Sicherheit Ihrer Daten ist uns wichtig. Beachten Sie jedoch, dass keine Methode der Übertragung über das Internet oder Methode der elektronischen Speicherung zu 100% sicher ist. Wir verwenden handelsübliche, akzeptable Mittel zum Schutz Ihrer personenbezogenen Daten, einschließlich Verschlüsselung und strenger Zugangskontrollen.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">6. Data Retention</h2>
-            <p>We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">6. Datenaufbewahrung</h2>
+            <p>Wir bewahren Ihre personenbezogenen Daten nur so lange auf, wie es für die in dieser Datenschutzerklärung dargelegten Zwecke erforderlich ist. Wir werden Ihre personenbezogenen Daten in dem Umfang aufbewahren und verwenden, wie es zur Erfüllung unserer gesetzlichen Verpflichtungen erforderlich ist.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">7. User Rights</h2>
-            <p>You have the right to access, update or delete the information we have on you. You can exercise these rights by contacting us directly through our support channels.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">7. Benutzerrechte</h2>
+            <p>Sie haben das Recht, auf die Informationen zuzugreifen, die wir über Sie gespeichert haben, diese zu aktualisieren oder zu löschen. Sie können diese Rechte ausüben, indem Sie uns direkt über unsere Support-Kanäle kontaktieren.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">8. Marketing & Third Parties</h2>
-            <p>We may employ third party companies and individuals to facilitate our Service, provide the Service on our behalf, perform Service-related services or assist us in analyzing how our Service is used. These third parties have access to your Personal Data only to perform these tasks on our behalf.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">8. Marketing & Dritte</h2>
+            <p>Wir können Drittunternehmen und Einzelpersonen beauftragen, um unseren Service zu erleichtern, den Service in unserem Namen bereitzustellen, servicebezogene Dienstleistungen zu erbringen oder uns bei der Analyse der Nutzung unseres Services zu unterstützen. Diese Dritten haben nur Zugang zu Ihren personenbezogenen Daten, um diese Aufgaben in unserem Namen zu erfüllen.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">9. International Transfers</h2>
-            <p>Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">9. Internationale Übertragungen</h2>
+            <p>Ihre Informationen, einschließlich personenbezogener Daten, können auf Computer übertragen und dort gepflegt werden, die sich außerhalb Ihres Staates, Ihrer Provinz, Ihres Landes oder einer anderen staatlichen Gerichtsbarkeit befinden, wo die Datenschutzgesetze von denen Ihrer Gerichtsbarkeit abweichen können.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">10. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us via our website's contact forms.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">10. Kontaktieren Sie uns</h2>
+            <p>Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte über die Kontaktformulare unserer Website.</p>
           </div>
         </motion.div>
       </main>

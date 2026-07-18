@@ -13,9 +13,9 @@ export function Footer() {
           <span className="opacity-60">© {new Date().getFullYear()}</span>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-6">
-          <Link to="/privacy-policy" className="hover:text-foreground transition">Privacy Policy</Link>
-          <Link to="/terms-conditions" className="hover:text-foreground transition">Terms & Conditions</Link>
-          <Link to="/portal" className="hover:text-foreground transition">Member portal</Link>
+          <Link to="/privacy-policy" className="hover:text-foreground transition">Datenschutzbestimmungen</Link>
+          <Link to="/terms-conditions" className="hover:text-foreground transition">Nutzungsbedingungen</Link>
+          <Link to="/portal" className="hover:text-foreground transition">Mitgliederportal</Link>
         </div>
       </div>
     </footer>

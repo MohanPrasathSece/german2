@@ -10,7 +10,7 @@ export function TermsConditions() {
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 hover:text-brand transition">
             <ArrowLeft className="w-4 h-4" />
-            <span className="font-semibold text-sm">Back to Home</span>
+            <span className="font-semibold text-sm">Zurück zur Startseite</span>
           </Link>
           <span className="font-bold tracking-tight">Aetheria</span>
         </div>
@@ -18,39 +18,39 @@ export function TermsConditions() {
       
       <main className="mx-auto max-w-3xl px-6 pt-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="glass-card rounded-3xl p-8 md:p-12 border border-white/10 shadow-card">
-          <h1 className="text-4xl font-bold tracking-tight mb-8">Terms & Conditions</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-8">Nutzungsbedingungen</h1>
           <div className="prose prose-invert prose-brand max-w-none text-muted-foreground space-y-6 text-sm leading-relaxed">
-            <p><strong>Last Updated:</strong> {new Date().toLocaleDateString()}</p>
+            <p><strong>Zuletzt aktualisiert:</strong> {new Date().toLocaleDateString()}</p>
             
-            <h2 className="text-xl font-semibold text-foreground mt-8">1. Acceptance of Terms</h2>
-            <p>By accessing or using this website, you agree to be bound by these Terms & Conditions and our Privacy Policy. If you disagree with any part of the terms, you may not access the service.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">1. Annahme der Bedingungen</h2>
+            <p>Durch den Zugriff auf oder die Nutzung dieser Website erklären Sie sich mit diesen Nutzungsbedingungen und unserer Datenschutzerklärung einverstanden. Wenn Sie mit einem Teil der Bedingungen nicht einverstanden sind, dürfen Sie den Service nicht nutzen.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">2. Eligibility</h2>
-            <p>You must be at least 18 years old to use this website or any of our services. By using the website, you represent and warrant that you meet this requirement.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">2. Teilnahmeberechtigung</h2>
+            <p>Sie müssen mindestens 18 Jahre alt sein, um diese Website oder einen unserer Dienste nutzen zu können. Durch die Nutzung der Website sichern Sie zu und gewährleisten, dass Sie diese Anforderung erfüllen.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">3. Website Purpose</h2>
-            <p>The content provided on this website is for informational and educational purposes only. We are not a registered investment advisor, broker, or dealer.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">3. Zweck der Website</h2>
+            <p>Die auf dieser Website bereitgestellten Inhalte dienen nur zu Informations- und Bildungszwecken. Wir sind kein registrierter Anlageberater, Broker oder Händler.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">4. User Responsibilities & Acceptable Use</h2>
-            <p>You agree not to use the website for any unlawful purpose or to solicit others to perform or participate in any unlawful acts. You agree not to violate any international, federal, or state regulations, rules, laws, or local ordinances.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">4. Benutzerverantwortung & zulässige Nutzung</h2>
+            <p>Sie erklären sich damit einverstanden, die Website nicht für rechtswidrige Zwecke zu nutzen oder andere zur Durchführung oder Teilnahme an rechtswidrigen Handlungen aufzufordern. Sie stimmen zu, keine internationalen, bundesstaatlichen oder staatlichen Vorschriften, Regeln, Gesetze oder lokalen Verordnungen zu verletzen.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">5. Intellectual Property</h2>
-            <p>The Service and its original content, features and functionality are and will remain the exclusive property of the company and its licensors. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of the company.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">5. Geistiges Eigentum</h2>
+            <p>Der Service und seine ursprünglichen Inhalte, Merkmale und Funktionen sind und bleiben das ausschließliche Eigentum des Unternehmens und seiner Lizenzgeber. Unsere Marken und Handelsaufmachungen dürfen nicht ohne vorherige schriftliche Zustimmung des Unternehmens im Zusammenhang mit einem Produkt oder einer Dienstleistung verwendet werden.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">6. Cryptocurrency Risk Disclosure</h2>
-            <p>Trading and investing in cryptocurrencies involves substantial risk of loss and is not suitable for every investor. The valuation of cryptocurrencies and futures may fluctuate, and, as a result, clients may lose more than their original investment.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">6. Krypto-Risikohinweis</h2>
+            <p>Der Handel und die Investition in Kryptowährungen bergen ein erhebliches Verlustrisiko und sind nicht für jeden Anleger geeignet. Die Bewertung von Kryptowährungen und Futures kann schwanken, was dazu führen kann, dass Kunden mehr als ihre ursprüngliche Investition verlieren.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">7. No Financial or Investment Advice</h2>
-            <p>The information on this website does not constitute financial advice, investment advice, trading advice, or any other sort of advice. You should not treat any of the website's content as such.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">7. Keine Finanz- oder Anlageberatung</h2>
+            <p>Die Informationen auf dieser Website stellen keine Finanzberatung, Anlageberatung, Handelsberatung oder sonstige Beratung dar. Sie sollten keine Inhalte der Website als solche betrachten.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">8. No Guaranteed Returns</h2>
-            <p>Past performance is not indicative of future results. We make no representation that any account will or is likely to achieve profits or losses similar to those discussed on this website.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">8. Keine garantierten Renditen</h2>
+            <p>Die Leistung in der Vergangenheit ist kein Indikator für zukünftige Ergebnisse. Wir geben keine Zusicherung, dass ein Konto Gewinne oder Verluste erzielen wird oder voraussichtlich erzielen wird, die den auf dieser Website diskutierten ähnlich sind.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">9. Limitation of Liability</h2>
-            <p>In no event shall we, nor our directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">9. Haftungsbeschränkung</h2>
+            <p>In keinem Fall haften wir oder unsere Direktoren, Mitarbeiter, Partner, Vertreter, Lieferanten oder verbundene Unternehmen für indirekte, zufällige, besondere, Folge- oder Strafschäden, einschließlich, aber nicht beschränkt auf entgangenen Gewinn, Datenverlust, Nutzungsverlust, Goodwill oder andere immaterielle Verluste, die aus Ihrem Zugriff auf den Service oder der Nutzung des Service oder der Unmöglichkeit des Zugriffs oder der Nutzung resultieren.</p>
 
-            <h2 className="text-xl font-semibold text-foreground mt-8">10. Governing Law & Disputes</h2>
-            <p>These Terms shall be governed and construed in accordance with the laws, without regard to its conflict of law provisions. Any dispute arising from these terms will be resolved in the applicable courts of the jurisdiction.</p>
+            <h2 className="text-xl font-semibold text-foreground mt-8">10. Anwendbares Recht & Streitigkeiten</h2>
+            <p>Diese Bedingungen unterliegen den Gesetzen und werden entsprechend ausgelegt, ohne Berücksichtigung der Bestimmungen zum Kollisionsrecht. Jegliche Streitigkeiten, die sich aus diesen Bedingungen ergeben, werden vor den zuständigen Gerichten der Gerichtsbarkeit gelöst.</p>
           </div>
         </motion.div>
       </main>
