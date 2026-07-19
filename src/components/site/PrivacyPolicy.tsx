@@ -12,7 +12,7 @@ export function PrivacyPolicy() {
             <ArrowLeft className="w-4 h-4" />
             <span className="font-semibold text-sm">Zurück zur Startseite</span>
           </Link>
-          <span className="font-bold tracking-tight">Aetheria</span>
+          <span className="font-bold tracking-tight">Avenza</span>
         </div>
       </header>
       

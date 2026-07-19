@@ -39,7 +39,7 @@ function Nav() {
             <div className="w-8 h-8 rounded-xl bg-brand-gradient flex items-center justify-center shadow-brand">
               <Sparkles className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold tracking-tight">Aetheria</span>
+            <span className="font-bold tracking-tight">Avenza</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#process" className="hover:text-foreground transition">So funktioniert's</a>
@@ -175,7 +175,7 @@ function Hero() {
         >
           <div className="flex items-center justify-between text-sm">
             <div>
-              <div className="text-muted-foreground text-xs">Aetheria Alpha Portfolio</div>
+              <div className="text-muted-foreground text-xs">Avenza Alpha Portfolio</div>
               <div className="font-semibold text-lg">
                 +<CountUp to={42.8} decimals={1} suffix="%" /> YTD
               </div>
@@ -302,7 +302,7 @@ function Intelligence() {
               Gebaut für Investoren, die Diskretion und einen <span className="text-brand-gradient">Informationsvorsprung schätzen.</span>
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              Aetheria kombiniert quantitatives Research, On-Chain-Intelligenz und
+              Avenza kombiniert quantitatives Research, On-Chain-Intelligenz und
               maschinelles Lernen, um ein Portfolio-Erlebnis zu bieten, das bisher
               Institutionen vorbehalten war.
             </p>

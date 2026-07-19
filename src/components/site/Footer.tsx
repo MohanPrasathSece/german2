@@ -9,7 +9,7 @@ export function Footer() {
           <div className="w-6 h-6 rounded-lg bg-brand-gradient flex items-center justify-center shadow-brand">
             <Sparkles className="w-3 h-3 text-white" />
           </div>
-          <span className="font-semibold text-foreground">Aetheria Capital</span>
+          <span className="font-semibold text-foreground">Avenza Finance</span>
           <span className="opacity-60">© {new Date().getFullYear()}</span>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-6">
